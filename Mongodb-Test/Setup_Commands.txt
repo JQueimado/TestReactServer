@@ -1,0 +1,2 @@
+Create React application without installing on the current system:
+    - npx create-react-app <app-name>

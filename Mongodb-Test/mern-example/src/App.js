@@ -8,6 +8,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 //Router
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+//SubComponents
+import CreateTodo from "./Component/createTodo";
+import EditTodo from "./Components/editTodo";
+import TodosList from "./Components/todoList";
+
 function App() {
   return (
     <Router>

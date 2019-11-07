@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 //SubComponents
-import CreateTodo from "./Component/createTodo";
+import CreateTodo from "./Components/createTodo";
 import EditTodo from "./Components/editTodo";
 import TodosList from "./Components/todoList";
 

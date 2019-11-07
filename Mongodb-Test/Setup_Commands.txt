@@ -7,3 +7,6 @@ Change to the folder <app-name> and test the app:
 
 Install Bootstrap:
     -npm install bootstrap
+
+Setup React Router:
+    -npm install react-router-dom

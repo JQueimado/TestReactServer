@@ -1,2 +1,9 @@
 Create React application without installing on the current system:
-    - npx create-react-app <app-name>
+    -npx create-react-app <app-name>
+
+Change to the folder <app-name> and test the app:
+    -cd <app-name>
+    -npm start
+
+Install Bootstrap:
+    -npm install bootstrap

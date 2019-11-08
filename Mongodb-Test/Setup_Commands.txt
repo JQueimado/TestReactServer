@@ -19,4 +19,14 @@
     
     Create a package.json inside backend:
         -npm init -y
-    
+
+    Install dependencies to project:
+        -npm install express body-parser cors mongoose
+            >Express: Web Framework for Node.js
+            >body-parser: Node.js body-parser
+            >cors: allows for the request from restricted ressorces from external domains
+            >mongoose: Node.js framework to connect to mongodb
+
+    Inatall nodemon package:
+        -npm install -g nodemon
+            >nodemon: detects changes in the files and restars the server automatically

@@ -1,12 +1,22 @@
-Create React application without installing on the current system:
-    -npx create-react-app <app-name>
+-> Frontend setup
+    Create React application without installing on the current system:
+        -npx create-react-app <app-name>
 
-Change to the folder <app-name> and test the app:
-    -cd <app-name>
-    -npm start
+    Change to the folder <app-name> and test the app:
+        -cd <app-name>
+        -npm start
 
-Install Bootstrap:
-    -npm install bootstrap
+    Install Bootstrap:
+        -npm install bootstrap
 
-Setup React Router:
-    -npm install react-router-dom
+    Setup React Router:
+        -npm install react-router-dom
+
+-> Backend setup
+    Create a backend folder:
+        -mkdir backend
+        -cd backend
+    
+    Create a package.json inside backend:
+        -npm init -y
+    

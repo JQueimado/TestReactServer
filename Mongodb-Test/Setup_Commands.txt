@@ -30,3 +30,8 @@
     Inatall nodemon package:
         -npm install -g nodemon
             >nodemon: detects changes in the files and restars the server automatically
+    
+    After Creating the basic server test it by running:
+        -nodemon server
+        >For Windows sistems is necessary to change the execusion policy to remotesigned.
+         To that open windows powershel in admin mode and insert the command >Set-ExecutionPolicy -ExecutionPolicy RemoteSigned

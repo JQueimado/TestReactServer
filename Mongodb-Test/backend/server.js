@@ -22,6 +22,11 @@ connection.once("open", () => {
   console.log("Connected to Atlas");
 });
 
+//Routes
+const todo = require("./routes/todo");
+
+app.use("/todo", todo);
+
 app.listen(PORT, function() {
   console.log("Server is running on Port: " + PORT);
 });

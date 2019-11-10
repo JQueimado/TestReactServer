@@ -36,3 +36,6 @@
         -nodemon server
         >For Windows sistems is necessary to change the execusion policy to remotesigned.
          To that open windows powershell in admin mode and insert the command >Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+
+    To connect react to the backend server we need to be able to send http commands from the react app for that we use axios:
+        -npm install axios

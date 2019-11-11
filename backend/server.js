@@ -23,7 +23,8 @@ connection.once("open", () => {
 });
 
 //Routes
-/* TODO */
+const userRoutes = require("./routes/user.route");
+app.use("/user", userRoutes);
 
 app.listen(PORT, function() {
   console.log("Server is running on Port: " + PORT);

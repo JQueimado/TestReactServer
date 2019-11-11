@@ -19,7 +19,7 @@ userRouter.route("/:id").get((request, response) => {
   let id = request.params.id;
   User.findById(id, (err, user) => {
     err
-      ? response.status(404).send("User with id: ${id} not found")
+      ? response.status(404).send("User with id not found")
       : response.json(user);
   });
 });

@@ -27,7 +27,7 @@ export default class Users extends Component {
 
   render() {
     return (
-      <div>
+      <div className="m-4">
         {this.state.users.length === 0 ? (
           <a> No Users </a>
         ) : (

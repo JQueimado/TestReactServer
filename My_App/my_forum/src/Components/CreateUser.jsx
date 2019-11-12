@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Alert from "react-bootstrap/Alert";
 
 export default class CreateUser extends Component {
   constructor(props) {
@@ -8,7 +9,9 @@ export default class CreateUser extends Component {
     this.state = {
       user_name: "",
       password: "",
-      email: ""
+      email: "",
+      sucssesShow: false,
+      errorShow: false
     };
 
     this.onSubmit = this.onSubmit.bind(this);
@@ -37,15 +40,18 @@ export default class CreateUser extends Component {
   onSubmit(e) {
     e.preventDefault();
 
-    if (this.user_name === "") return;
-
     const Package = {
       user_name: this.state.user_name
     };
 
-    axios.post("http://localhost:4000/user/add", Package).then(res => {
-      console.log(res.data);
-    });
+    axios
+      .post("http://localhost:4000/user/add", Package)
+      .then(res => {
+        this.setState({ user_name: "", sucssesShow: true });
+      })
+      .catch(err => {
+        this.setState({ errorShow: true });
+      });
   }
 
   // Style Controlers
@@ -59,6 +65,29 @@ export default class CreateUser extends Component {
     return (
       <div className="m-4">
         <h3> Create User </h3>
+
+        <Alert
+          variant="success"
+          show={this.state.sucssesShow}
+          onClose={() => {
+            this.setState({ sucssesShow: false });
+          }}
+          dismissible
+        >
+          User Added successfully
+        </Alert>
+
+        <Alert
+          variant="danger"
+          show={this.state.errorShow}
+          onClose={() => {
+            this.setState({ errorShow: false });
+          }}
+          dismissible
+        >
+          User could not be Added
+        </Alert>
+
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
             <label> User Name: </label>

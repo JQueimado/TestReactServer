@@ -28,16 +28,22 @@ export default class Users extends Component {
   render() {
     return (
       <div>
-        <h3>User List</h3>
-        <table className="table table-striped" style={{ marginTop: 20 }}>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>User Name</th>
-            </tr>
-          </thead>
-          <tbody>{this.users()}</tbody>
-        </table>
+        {this.state.users.length === 0 ? (
+          <a> No Users </a>
+        ) : (
+          <div>
+            <h3>User List</h3>
+            <table className="table table-striped" style={{ marginTop: 20 }}>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>User Name</th>
+                </tr>
+              </thead>
+              <tbody>{this.users()}</tbody>
+            </table>
+          </div>
+        )}
       </div>
     );
   }

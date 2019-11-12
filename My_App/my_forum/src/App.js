@@ -5,7 +5,9 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Users from "./Components/Users";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import CreateUser from "./Components/CreateUser";
+import Discucions from "./Components/Discucions";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 function App() {
   return (
@@ -41,9 +43,11 @@ function App() {
         </div>
       </nav>
 
-      <Route path="/" component={null} />
-      <Route path="/users" component={Users} />
-      <Route path="/users_create" component={null} />
+      <Switch>
+        <Route path="/" exact component={Discucions} />
+        <Route path="/users" component={Users} />
+        <Route path="/users_create" component={CreateUser} />
+      </Switch>
     </Router>
   );
 }

@@ -26,6 +26,9 @@ connection.once("open", () => {
 const userRoutes = require("./routes/user.route");
 app.use("/user", userRoutes);
 
+const discussionRoutes = require("./routes/discussions.route");
+app.use("/discussions", discussionRoutes);
+
 app.listen(PORT, function() {
   console.log("Server is running on Port: " + PORT);
 });

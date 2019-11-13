@@ -28,11 +28,11 @@ export default class Users extends Component {
   render() {
     return (
       <div className="m-4">
+        <h3>User List</h3>
         {this.state.users.length === 0 ? (
           <a> No Users </a>
         ) : (
           <div>
-            <h3>User List</h3>
             <table className="table table-striped" style={{ marginTop: 20 }}>
               <thead>
                 <tr>

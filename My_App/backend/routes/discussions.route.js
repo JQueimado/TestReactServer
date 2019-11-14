@@ -2,9 +2,13 @@ const discussionRouter = require("express").Router();
 let Discussion = require("../models/discussion.model");
 
 discussionRouter.route("/").get((request, response) => {
-  User.find((err, discussion) =>
-    err ? console.log("No Discussions Avalable") : response.json(discussion)
-  );
+  Discussion.find((err, discussion) => {
+    if (err) {
+      console.log("No Discussions Avalable");
+    } else {
+      response.json(discussion);
+    }
+  });
 });
 
 discussionRouter.route("/create").post((request, response) => {

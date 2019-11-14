@@ -3,7 +3,11 @@ import React, { Component } from "react";
 class Discussion_List extends Component {
   state = {};
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <h3>This are the discussions</h3>
+      </div>
+    );
   }
 }
 
